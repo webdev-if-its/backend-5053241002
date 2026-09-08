@@ -42,7 +42,7 @@ Reproducibility adalah kondisi dimana terdapat perbedaan versi Go diantara anggo
 Conflict terjadi di fungsi CetakInfo pada file main.go. Conflict tersebut terjadi dikarenakan terdapat fungsi yang sama namun dengan instruksi yang berbeda. Pada branch fitur-sapaan, fungsi CetakInfo menambahkan fungsi Sapa(nama). Sedangkan pada branch main, fungsi CetakInfo telah diubah urutannya. Disini saya menyelesaikan dengan menghapus code dari branch main, sehingga fungsi CetakInfo berasal dari branch fitur-sapaan.
 
 ## Kenapa .gitignore Penting
-(tulis di sini)
+.gitignore penting karena dengan .gitignore membantu mencegah file file yang tidak diperlukan serta file sensitif dalam direktori lokal ikut di upload ke repository online. Salah satu contohnya adalah ketika ada file build IDE yang ikut ter-commit dan di push ke repository. Jika ada anggota tim lain yang melakukan pull dari repository tersebut, maka ketika programnya dijalankan, akan menemui error. Karena, terdapat perbedaan konfigurasi environtment antara perangkat tim lain dengan file build IDE yang ikut ter-pull. Hal tersebut dapat menghambat kerja dikarenakan, harus melakukan debugging terkait masalah konfigurasi environtment yang seharusnya bisa dicegah dengan menggunakan .gitignore.
 
 ## Refleksi
-(tulis di sini)
+Bagi saya, soal yang membingungkan ada di soal 8. Soal yang membahas terkait branching, merging, dan conflict. Karena ini pertama kali bagi saya melakukan skenario branching, merging, dan conflict. Namun, setelah mencobanya secara langsung saya mulai paham dan conflict membantu mencegah kode yang tumpang tindih ketika hendak di merge.
