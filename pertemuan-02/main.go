@@ -80,7 +80,11 @@ func RingkasanPesanan(qty []int, hargaSatuan []float64, tarifPajak float64) stri
 // TODO(Level 9): signature ini SUDAH benar (cari tahu sendiri kenapa
 // bentuknya begini - lihat SOAL.md) - tinggal implementasikan isinya.
 func Total(harga ...float64) float64 {
-	panic("belum diimplementasikan")
+	var total float64
+	for i := 0; i < len(harga); i++ {
+		total += harga[i]
+	}
+	return total
 }
 
 // TODO(Level 10, bonus): signature ini SUDAH benar (cari tahu sendiri
