@@ -90,7 +90,15 @@ func Total(harga ...float64) float64 {
 // TODO(Level 10, bonus): signature ini SUDAH benar (cari tahu sendiri
 // kenapa ada dua nilai balik - lihat SOAL.md) - tinggal implementasikan isinya.
 func HitungOngkosKirim(beratKg float64, jarakKm float64) (float64, error) {
-	panic("belum diimplementasikan")
+	if beratKg <= 0 {
+		return 0, fmt.Errorf("berat barang harus lebih besar dari 0")
+	}
+	if jarakKm < 0 {
+		return 0, fmt.Errorf("jarak pengiriman tidak boleh negatif")
+	}
+
+	ongkos := (beratKg * 2000) + (jarakKm * 3000)
+	return ongkos, nil
 }
 
 func main() {
