@@ -61,8 +61,14 @@ func HapusTugas(toko *TokoTugas, id int) error {
 			break
 		}
 	}
+
+	if idx == -1 {
+		return ErrTugasTidakDitemukan
+	}
+
 	toko.Daftar = append(toko.Daftar[:idx], toko.Daftar[idx+1:]...)
 	return nil
+
 }
 
 // HapusTugasTercatat memanggil HapusTugas, lalu memakai defer untuk
