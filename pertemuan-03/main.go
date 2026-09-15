@@ -40,8 +40,8 @@ func TambahTugas(toko *TokoTugas, judul string) (Task, error) {
 		Selesai: false,
 	}
 	toko.Daftar = append(toko.Daftar, tugas)
-
 	return tugas, nil
+
 }
 
 func LihatTugas(toko *TokoTugas, id int) (Task, error) {
@@ -50,7 +50,7 @@ func LihatTugas(toko *TokoTugas, id int) (Task, error) {
 			return tugas, nil
 		}
 	}
-	return Task{}, nil
+	return Task{}, ErrTugasTidakDitemukan
 }
 
 func HapusTugas(toko *TokoTugas, id int) error {
